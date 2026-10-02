@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in Detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Post with id : <%= post.id %></h1>
+        <div class="post">
+            <h3 class="user">@<%= post.username.replace(/\s/g, '').toLowerCase(); %></h3>
+            <p class="content"><%= post.content %></p>
+            <a href="http://localhost:8080/posts/<%= post.id%>/edit"><button>Edit Post</button></a>
+        </div>
+
+    <br><br>
+    <a href="http://localhost:8080/posts/new"><button>Create Post</button></a>
+</body>
+</html>
